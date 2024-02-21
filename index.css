@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+
+*, :root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: Inter, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background-color: rgb(13, 18, 25);
+}
+
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto 64px;
+}
+
+
+img {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  width: 60%;
+  height: 60%;
+  margin-left: 140px;
+}
+
+#quiz {
+  counter-reset: quiz-item;
+}
+
+.quiz-item {
+  margin-top: 24px;
+  border: 1px solid white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.quiz-item h3 {
+  padding: 16px 20px;
+  color: white;
+  background-color: rgb(21, 88, 58);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+}
+
+
+.quiz-item h3:before {
+  counter-increment: quiz-item;
+  content: counter(quiz-item);
+  background-color: rgb(13, 18, 25);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quiz-item dl {
+  padding: 20px 24px;
+  display: grid;
+  gap: 8px;
+}
+
+.quiz-item dl dt {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+
+input {
+  all: unset;
+  border: 1px solid white;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: height 0.15s, width 0.15s, border-color 0,15s;
+}
+
+input:hover {
+  height: 19px;
+  width: 19px;
+  border-color: rgb(21, 88, 58);
+
+}
+
+input:active {
+  width: 14px;
+  height: 14px;
+  border-color: rgb(21, 88, 58);
+
+}
+
+input:checked {
+  border: 1px solid rgb(21, 88, 58);
+}
+
+input:checked:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(21, 88, 58);
+
+}
+
+#acertos {
+  font-size: 18px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(21, 88, 58);
+  color: white;
+}
